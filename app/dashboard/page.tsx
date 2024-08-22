@@ -10,6 +10,11 @@ import {
     CardsSkeleton,
   } from '@/app/lib/data';
 
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'dashboard',
+};
+
 export default async function Page() {
   const revenue = await fetchRevenue();
   const latestInvoices = await fetchLatestInvoices();
